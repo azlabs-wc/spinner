@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <style>
+    *,
+    body,
+    :host {
+      font-size: calc(10px + 2vmin);
+      color: #1a2b42;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      background: #fafafa;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 3rem;
+      line-height: 1.2rem;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+    }
+
+    .output-section {
+      margin-left: 50%;
+    }
+
+    .preview {
+      display: flex;
+      align-items: stretch;
+      align-content: center;
+    }
+
+    .spinner {
+      margin-bottom: 12px;
+      align-self: stretch;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page-title">Spinners</div>
+  <div class="output-section">
+    <div class="preview">
+      <div id="demo"></div>
+    </div>
+  </div>
+  <script type="module">
+    import { html, render } from 'lit';
+    import '../dist/azl-overlay-spinner.js';
+    import '../dist/azl-spinner.js';
+
+    render(
+      html`
+          <azl-spinner class="spinner" size="small">
+          </azl-spinner>
+          <azl-spinner  class="spinner" size="small" basic>
+          </azl-spinner>
+          <azl-spinner  class="spinner" size="medium">
+          </azl-spinner>
+          <azl-spinner  class="spinner" size="medium" basic>
+          </azl-spinner>
+        </div>
+      `,
+      document.querySelector('#demo')
+    );
+  </script>
+</body>
+
+</html>
